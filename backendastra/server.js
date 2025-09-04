@@ -24,7 +24,7 @@ if (process.env.NODE_ENV === 'production') {
 
 // **UPDATED**: CORS configuration with proper credentials support
 app.use(cors({
-  origin: process.env.FRONTEND_URL, // Must be specific URL, not '*' for credentials
+  origin: 'https://alphaknowledge.vercel.app', // Must be specific URL, not '*' for credentials
   credentials: true, // **ESSENTIAL** - Allows cookies to be sent/received
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
@@ -103,3 +103,4 @@ const startServer = async () => {
 };
 
 startServer();
+
